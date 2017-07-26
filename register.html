@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Local Storage</title>
+<script>
+function goToURL(){
+window.open("main.html");
+}
+function register(){
+var storedEmail=document.getElementById("email").value;
+var storedName=document.getElementById("name").value;
+var storedPassword=document.getElementById("password").value;
+localStorage.setItem('Email',storedEmail)
+localStorage.setItem('Name',storedName)
+localStorage.setItem('Password',storedPassword)
+showMessage();
+}
+function showMessage(){
+alert("You are successfully registered");
+}
+</script>
+<body>
+Email:<input type="text" placeholder="Enter Your Email" id="email"/><br><br>
+Name:<input type="text" placeholder="Enter your name" id="name"/><br><br>
+Password:<input type="password" placeholder="Enter the password" id="password"/><br><br>
+<input type="button" value="Register" onclick="register()"/>
+<input type="button" value="Back to Main Page "/ onclick="goToURL()">
+</body>
+</html>

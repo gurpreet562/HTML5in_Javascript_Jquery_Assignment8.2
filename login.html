@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>LogIn</title>
+<script>
+function check(){
+var user=localStorage.getItem('Email');
+var password=localStorage.getItem('Password');
+
+var username=document.getElementById('username');
+var pass=document.getElementById('pass');
+if((username.value==user) && (pass.value==password)){
+alert('welcome:' +username.value);
+}else{
+alert('error');
+}
+}
+</script>
+</head>
+<body>
+Email:<input type="text" placeholder="Enter Your Email" id="username"/><br><br>
+Password:<input type="password" placeholder="Enter the password" id="pass"/><br><br>
+<input type="button" value="LogIn" onclick="check()"/ >
+
+</body>
+</html>
